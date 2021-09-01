@@ -1,0 +1,19 @@
+<section style="margin-top: 20px">
+  <hr>
+  <h2>Add a new article</h2>
+  <form action='/article' method='POST'>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input id="title" class="form-control" type="text" name="title">
+    </div>
+    <div class="mb-3">
+      <label for="headline" class="form-label">Headline</label>
+      <input id="headline" class="form-control" type="text" name="headline">
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">Content</label>
+      <textarea rows="10" id="content" class="form-control" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add article</button>
+  </form>
+</section>

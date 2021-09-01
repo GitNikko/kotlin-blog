@@ -1,0 +1,17 @@
+<div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" style="background-color: lightblue; height: 20rem; text-align: center; display: flex; align-items: center">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1600548306075-a0daca29a664?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=990&q=80">
+        </img>
+      </div>
+      {{#articles}}
+        <div class="carousel-item">
+            <h2 class="article-title"><a class="link-secondary" href="/article/{{slug}}">{{title}}</a></h2>
+            <div class="article-meta">By  <strong>{{author.firstname}}</strong>, on <strong>{{addedAt}}</strong></div>
+            <div class="article-description">
+              {{headline}}
+            </div>
+        </div>
+      {{/articles}}
+    </div>
+  </div>
