@@ -38,8 +38,8 @@ class HtmlController(private val articleRepository: ArticleRepository, private v
         model.addAttribute("title", title)
         println("*** Form submitted ***")
         val user = userRepository.findByLogin("smaldini")
-        articleRepository.save(Article(title = title, headline = title, content = content, author = user!!))
-        return "blog"
+        val article = articleRepository.save(Article(title = title, headline = title, content = content, author = user!!))
+        return "redirect:/article/${article.slug}"
     }
 
     fun Article.render() = RenderedArticle(
